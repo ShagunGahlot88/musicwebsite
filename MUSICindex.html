@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Music website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Music" href="music.js">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#"><I><B><U>HOME</U></B></I></a></li>
+                <li>
+                    <a href="#"> <I><B><U>ABOUT</U></B></I></a>
+                 </li>
+                     <li><a href="#"><I><b><U>SPECIFICATION
+                     </I></b></U></a></li>
+                     <li><a href="#"><I><b><U>
+                     PRODUCTS  </I></b></U> </a></li>
+                     <li><a href="#"><I><b><U>CONTACT</U></b>
+                     </I></a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br> REAL<br> SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="play.png" id="icon">
+            </div>
+
+        </div>
+    </div>
+
+    <audio id="mysong">
+    <source src="Hanuman Chalisa.mp3" type="audio/mp3">
+</audio>
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.oneclick = function() {
+            if (mysong.paused) {
+                mysong.play();
+                icon.src = "pause.png";
+
+            } else {
+                mysong.paused();
+                icon.src = "play.png";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
